@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<style>
+			.colors {
+				background: linear-gradient(62deg, #3e67a6 10%, #749bb8 30%, #9fc7d3 50%);
+				height: 75px;
+				width: 75px;
+			}
+
+			.colors2 {
+				background: linear-gradient(62deg, #726953 10%, #7e765b 30%, #aca666 50%);
+				height: 75px;
+				width: 75px;
+			}
+
+			.colors3 {
+				background: linear-gradient(62deg, #eec96a 10%, #f7d37c 30%, #ffffc2 50%);
+				height: 75px;
+				width: 75px;
+			}
+
+			.colors4 {
+				background: linear-gradient(62deg, #5479e6 10%, #7ba3ed 30%, #c8edf8 50%);
+				height: 75px;
+				width: 75px;
+			}
+
+			.colors5 {
+				background: linear-gradient(62deg, #ce8d62 10%, #db9d56 25%, #f3cb48 50%);
+				height: 75px;
+				width: 75px;
+			}
+
+			.colors6 {
+				background: linear-gradient(62deg, #5479e6 10%, #7ba3ed 30%, #c8edf8 50%);
+				height: 75px;
+				width: 75px;
+			}
+
+			.colors7 {
+				background: linear-gradient(to right, #42516b, transparent);
+				height: 75px;
+				width: 75px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="colors"></div>
+
+		<div class="colors2"></div>
+
+		<div class="colors3"></div>
+
+		<div class="colors4"></div>
+
+		<div class="colors5"></div>
+
+		<div class="colors6"></div>
+
+		<div class="colors7"></div>
+
+		<canvas id="id" width="300" height="59" style="border: 1px solid red"></canvas>
+
+		<script>
+			var canvas = document.getElementById("id");
+			var ctx = canvas.getContext("2d");
+
+			var color = "#000000";
+
+			var grd = ctx.createLinearGradient(0, 0, 275, 0);
+			grd.addColorStop(0, "rgba(37, 35, 49, 0.5)");
+			grd.addColorStop(1, "transparent");
+
+			ctx.beginPath();
+			ctx.lineWidth = 1;
+			ctx.fillStyle = grd;
+			ctx.strokeStyle = "transparent";
+			ctx.moveTo(65, 55);
+			ctx.lineTo(295, 55);
+			ctx.lineTo(295, 5);
+			ctx.lineTo(65, 5);
+			ctx.lineTo(40, 30);
+			ctx.lineTo(65, 55);
+			ctx.fill();
+			ctx.stroke();
+			ctx.closePath();
+
+			ctx.beginPath();
+			ctx.lineWidth = 3;
+			ctx.strokeStyle = "#5da1ff";
+			ctx.lineCap = "round";
+			ctx.moveTo(69, 50);
+			ctx.lineTo(290, 50);
+			ctx.stroke();
+			ctx.closePath();
+
+			ctx.beginPath();
+			ctx.lineWidth = 3;
+			ctx.strokeStyle = "#5da1ff";
+			ctx.lineCap = "round";
+			ctx.moveTo(69, 50);
+			ctx.lineTo(49, 30);
+			ctx.stroke();
+			ctx.closePath();
+
+			ctx.beginPath();
+			ctx.lineWidth = 3;
+			ctx.strokeStyle = "#ffde00";
+			ctx.lineCap = "square";
+			ctx.moveTo(70, 45);
+			ctx.lineTo(289, 45);
+			ctx.stroke();
+			ctx.closePath();
+
+			ctx.beginPath();
+			ctx.lineWidth = 1;
+			ctx.fillStyle = "#000000";
+			ctx.font = "20px Arial";
+			ctx.fillText("Hello World", 120, 40);
+			ctx.stroke();
+			ctx.closePath();
+		</script>
+	</body>
+</html>

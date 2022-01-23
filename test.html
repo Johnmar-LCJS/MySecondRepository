@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				font-family: Verdana, sans-serif;
+				margin: 0;
+			}
+			.events {
+				display: none;
+			}
+			img {
+				vertical-align: middle;
+			}
+
+			.rect {
+				cursor: pointer;
+				height: 10px;
+				width: 25px;
+				margin: 0 2px;
+				background: #bbb;
+				display: inline-block;
+				transition: background-color 0.6s ease;
+			}
+
+			.active,
+			.rect:hover {
+				background: #717171;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="eventBox">
+			<div class="events">
+				<img src="Images/CMB(s)/Banner2.png" style="width: 100%" />
+			</div>
+
+			<div class="events">
+				<img src="Images/CMB(s)/Banner3.png" style="width: 100%" />
+			</div>
+
+			<div class="events">
+				<img src="Images/CMB(s)/Banner.png" style="width: 100%" />
+			</div>
+
+			<div class="events">
+				<img src="Images/CMB(s)/Banner2.png" style="width: 100%" />
+			</div>
+
+			<div class="events">
+				<img src="Images/CMB(s)/Banner3.png" style="width: 100%" />
+			</div>
+
+			<div class="events">
+				<img src="Images/CMB(s)/Banner.png" style="width: 100%" />
+			</div>
+		</div>
+		<br />
+
+		<div style="text-align: left">
+			<div class="rect" onclick="banner(1)"></div>
+			<div class="rect" onclick="banner(2)"></div>
+			<div class="rect" onclick="banner(3)"></div>
+			<div class="rect" onclick="banner(4)"></div>
+			<div class="rect" onclick="banner(5)"></div>
+			<div class="rect" onclick="banner(6)"></div>
+		</div>
+
+		<script>
+			var bannerIndex = 1;
+			displayBanner(bannerIndex);
+
+			function prevNextBanner(n) {
+				displayBanner((bannerIndex += n));
+			}
+
+			function banner(n) {
+				displayBanner((bannerIndex = n));
+			}
+
+			const auto = setInterval(function () {
+				let x = 0;
+				x = ++x;
+
+				if (x < 50) {
+					prevNextBanner(1);
+				}
+			}, 4000);
+
+			function displayBanner(n) {
+				var i;
+				var banner = document.getElementsByClassName("events");
+				var rect = document.getElementsByClassName("rect");
+				if (n > banner.length) {
+					bannerIndex = 1;
+				}
+				if (n < 1) {
+					bannerIndex = banner.length;
+				}
+				for (i = 0; i < banner.length; i++) {
+					banner[i].style.display = "none";
+				}
+				for (i = 0; i < rect.length; i++) {
+					rect[i].className = rect[i].className.replace(" active", "");
+				}
+				banner[bannerIndex - 1].style.display = "block";
+				rect[bannerIndex - 1].className += " active";
+			}
+		</script>
+	</body>
+</html>

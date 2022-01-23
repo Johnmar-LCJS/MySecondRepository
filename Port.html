@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Port</title>
+		<link href="Css/centralSS.css" rel="stylesheet" rel="preload" type="text/css" />
+	</head>
+
+	<body>
+		<img src="Images/MMBG(s)/MainDayBG.png" atl="port" class="backgroundImage" id="shift" />
+
+		<div class="UI">
+			<div class="top">
+				<div class="profile" id="profile"></div>
+				<canvas class="playerName" id="playerName" width="300" height="59">
+					<!-- <div class="text">Johnmar</div> -->
+				</canvas>
+				<h2 id="clock"></h2>
+			</div>
+
+			<div class="taskButton" id="parentTaskButton">
+				<canvas id="taskButton" width="500" height="500"></canvas>
+			</div>
+
+			<div id="taskWindow">
+				<div id="taskConsole">
+					<div class="rightTaskMenu"></div>
+					<div class="resourceContainer">
+						<div class="resourceSupplies"><img src="Images/TRI(s)/Canteen.png" alt="Canteen" /></div>
+						<div class="resourceSupplies"><img src="Images/TRI(s)/Merchant.png" alt="Merchant" /></div>
+						<div class="resourceSupplies"><img src="Images/TRI(s)/Lecture_Hall.png" alt="Lecture_Hall" /></div>
+					</div>
+
+					<div class="tasksContainer">
+						<div class="tasks commission">Hello</div>
+						<div class="tasks classroom">Hello</div>
+						<div class="tasks lab">Hello</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="rightMenu">
+				<img src="Images/RightMenu.png" width="100%" height="100%" class="rightBG" />
+				<div class="menus">
+					<a href="#" class="menu">
+						<img src="Images/RMI(s)/Memories.png" class="image" />
+						<div class="menuText">Memories</div>
+					</a>
+					<a href="#" class="menu">
+						<img src="Images/RMI(s)/Memento.png" class="image" />
+						<div class="menuText">Memento</div>
+					</a>
+					<a href="#" class="menu">
+						<img src="Images/RMI(s)/Ladder.png" class="image" />
+						<div class="menuText">Ladder</div>
+					</a>
+					<a href="#" class="menu">
+						<img src="Images/RMI(s)/Friends.png" class="image" />
+						<div class="menuText">Friends</div>
+					</a>
+					<a href="#" class="menu">
+						<img src="Images/RMI(s)/Mail.png" class="image" />
+						<div class="menuText mail">Mail</div>
+					</a>
+					<a href="#" class="menu">
+						<img src="Images/RMI(s)/Notice.png" class="image" />
+						<div class="menuText">Notice</div>
+					</a>
+					<a href="#" class="menu">
+						<img src="Images/RMI(s)/Settings.png" class="image" />
+						<div class="menuText">Settings</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="centerConsole">
+				<div class="eventBox">
+					<div class="events">
+						<img src="Images/CMB(s)/Banner2.png" style="width: 100%" />
+					</div>
+
+					<div class="events">
+						<img src="Images/CMB(s)/Banner3.png" style="width: 100%" />
+					</div>
+
+					<div class="events">
+						<img src="Images/CMB(s)/Banner.png" style="width: 100%" />
+					</div>
+
+					<div class="events">
+						<img src="Images/CMB(s)/Banner2.png" style="width: 100%" />
+					</div>
+
+					<div class="events">
+						<img src="Images/CMB(s)/Banner3.png" style="width: 100%" />
+					</div>
+
+					<div class="events">
+						<img src="Images/CMB(s)/Banner.png" style="width: 100%" />
+					</div>
+				</div>
+				<br />
+
+				<div class="rectContainer">
+					<div class="rect" onclick="banner(1)"></div>
+					<div class="rect" onclick="banner(2)"></div>
+					<div class="rect" onclick="banner(3)"></div>
+					<div class="rect" onclick="banner(4)"></div>
+					<div class="rect" onclick="banner(5)"></div>
+					<div class="rect" onclick="banner(6)"></div>
+				</div>
+
+				<a href="#" class="formation">
+					<canvas id="formation"></canvas>
+					<img src="Images/CMI(s)/Formation.png" alt="formation" />
+					<div class="text">
+						FORMATION<br />
+						<div class="desc">EDIT YOUR FLEET</div>
+					</div>
+				</a>
+
+				<a href="UnderConstruction.html" class="battle">
+					<canvas id="battle"></canvas>
+					<img src="Images/CMI(s)/Battle.png" alt="battle" />
+					<div class="text">
+						BATTLE<br />
+						<div class="desc">ANCHOR AWEIGH</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="chatbox"><a href="UpdateScreen.html">loading</a></div>
+
+			<div class="bottom"></div>
+		</div>
+
+		<!-- <div id="secretary">
+			<img src="Images/Laffey.png" alt="laffey" width="115%" height="auto" />
+		</div> -->
+
+		<!-- <div id="mydiv">
+			<div id="mydivheader">
+				<img src="Images/Laffey.png" alt="laffey" width="115%" height="auto" />
+			</div>
+		</div> -->
+
+		<script src="Javascript/PortFunctions.js" rel="preload"></script>
+	</body>
+</html>
