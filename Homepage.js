@@ -8,5 +8,4 @@ function scroll() {
 	body.style.overflowY = "auto";
 	arrow.style.display = "block"
 	message.textContent = "(you can scroll now)"
-
 }

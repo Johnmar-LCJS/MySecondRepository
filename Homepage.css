@@ -116,14 +116,15 @@ a {
 	position: relative;
 	top: 10%;
 	transform: translateY(-10%);
-	font-size: 20px;
+	font-size: 18px;
 	text-align: center;
 	color: #fff;
-	line-height: 1.4;
+	line-height: 1.8;
 }
 
 .message div a {
-	color: blue;
+	text-decoration: underline;
+	color: #0000ff;
 }
 
 .titles {
