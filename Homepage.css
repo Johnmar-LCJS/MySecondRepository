@@ -155,7 +155,7 @@ a {
 	display: grid;
 	justify-content: center;
 	align-content: center;
-	grid-template-columns: repeat(auto-fill, minmax(auto, 350px));
+	grid-template-columns: repeat(auto, minmax(auto, 350px));
 	grid-auto-rows: minmax(auto, 197px);
 	margin: 0 50px 100px 50px;
 	gap: 20px;
